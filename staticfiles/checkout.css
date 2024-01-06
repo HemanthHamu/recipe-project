@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+main {
+    max-width: 600px;
+    margin: 70px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#checkoutForm {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+input {
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px;
+}
+button:hover {
+    background-color: #555;
+}
+span{
+    color: aqua;
+    font-size: 45px;
+}
+div{
+    margin-bottom: 10px;
+}
+div select{
+    padding: 5px;
+    margin: 5px;
+}
+.cards{
+    display: flex;
+    gap: 1px;
+    margin-left: 550px;
+    margin-top: -30px;
+}
+.cards i{
+    font-size: 25px;
+}

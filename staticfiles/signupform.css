@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url(/recipeproject/images/backgroundForMyRecipeWebsite.png);
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.signup-form {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 7px #1BAFDB;
+    animation: slideIn 0.6s ease-out;
+    background: url(/recipeproject/images/backgroundForMyRecipeWebsite.png);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.signup-form i {
+    font-size: 49px;
+    text-align: center;
+    margin-left: 250px;
+    color: #083e62;
+}
+
+h1{
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #5bbedc;
+    border-radius: 40px;
+    box-sizing: border-box;
+    animation: move 1s linear infinite;
+    box-shadow: 0 0 2px black;
+    background-color: #70c9e4;
+    font-size: 18px;
+   
+}
+input:focus{
+    outline: none;
+}
+@keyframes move {
+    from 0%,20%,40%  {
+        transform: translateX(0px);
+    }
+    60%,80%{
+        transform: translateX(-2px);
+    }
+    100%{
+        transform: translateX(2px);
+    }
+}
+a{
+    text-decoration: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin-top: -40px;
+}
+a:hover{
+    color: #000;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color:#07314e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: #20618f;
+}

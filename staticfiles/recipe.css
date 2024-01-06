@@ -1,0 +1,497 @@
+#body{
+    font-family:'Times New Roman', Times, serif;
+    color: #000;
+    background:url(/recipeproject/images/backgroundForMyRecipeWebsite3.png);
+    transition: 0.5s;
+}
+/* loader starting */
+.loader{
+    width: 70px;
+    height: 70px;
+    border: 7px solid white;
+    border-radius: 50%;
+    border-top: 7px solid blue;
+    animation: load 1s linear infinite;
+    z-index: 1;
+}
+@keyframes load{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+/* loader ending */
+
+/* sidebar starting */
+.csssidebar{
+    position: fixed;
+    background-color: rgb(14, 13, 13);
+    padding: 10px;
+    height: 70%;
+    width: 300px;
+    top: 85px;
+    right: -350px;
+    transition: 0.4s;
+    border: 2px solid aqua;
+    border-radius: 10px;
+}
+.csssidebar a{
+    display: block;
+    padding: 8px 0px;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+}
+.csssidebar a:hover{
+    background-color: rgb(50, 43, 43);
+}
+.csssidebar hr{
+    width: 100%;
+    margin-top: 0px;
+    border: 1px solid aqua;
+}
+/* sidebar ending */
+/* header starting */
+#header{
+    width: 100%;
+    background-color:#0b0b0b;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#header a{
+    display: inline;
+    padding: 20px 40px;
+    color: rgb(244, 240, 240);
+    font-size: 35px;
+    text-decoration: none;
+    cursor:auto;
+}
+
+#header .fa-bowl-food{
+    font-size: 30px;
+    color:aqua;
+    border: 3px solid aqua;
+    margin-left: -90px;
+    border-radius: 50%;
+    padding: 5px;
+    animation: bowl 5s linear infinite;
+}
+@keyframes bowl {
+    0% {transform:rotate(0deg);}
+    25% {transform:rotate(45deg);border: 3px solid white;color: aliceblue;}
+    75% {transform:rotate(-45deg);border: 3px solid lightgreen;color: lightgreen;}
+}
+#header input{
+    padding: 8px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: #fff;
+}
+input:focus {
+    outline: none;
+}
+
+#header #x-mark{
+    font-size: 35px;
+    margin-left: -90px;
+    color: #000;
+}
+#header #x-mark:hover{
+    background-color: rgb(159, 152, 152);
+    cursor: pointer;
+}
+#header .search-btn{
+    padding: 8px;
+    background-color: lightyellow;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 22px;
+    margin-left: -35px;
+}
+#header .search-btn:hover{
+    background-color: transparent;
+    transition: 0.5s;
+    border: 2px solid lightyellow;
+    color: lightyellow;
+ }
+#header .dine-in{  
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: lightyellow;
+    transition: 0.4s;
+    border-radius: 5px;
+    color: black;
+}
+#header .dine-in:hover{
+    border: 3px solid lightyellow;
+    color: lightyellow;
+    background-color: #10122A;
+}
+#header .fa-circle-half-stroke{
+    font-size: 35px;
+    color: lightyellow;
+    cursor: pointer;
+}
+#header .fa-cart-shopping{
+    font-size: 35px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 285px;
+}
+#header .fa-cart-shopping:hover p{
+    color: #00BAE2;
+    background-color: #000;
+}
+#header .fa-cart-shopping:hover{
+    color: #00BAE2;
+}
+
+#header .fa-cart-shopping p{
+    position: absolute;
+    top: -45px;
+    right: -20px;
+    background-color: red;
+    padding: 5px;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+}
+#header #sidebar-image{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 25px;
+    right: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #fff;
+}
+#header #sidebar-image:hover{
+    color: #00BAE2;
+}
+/* header ending */
+/* loader starting */
+.loader{
+    border: 10px solid white;
+    border-bottom: 10px solid blue;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+    margin-top: 50px;
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+/* loader ending */
+/* style for the content that is displayed after user searched for a specific recipe (starting) */
+
+.user-requests{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 5px;
+    border: 2px solid white;
+    margin: 100px auto;
+    background:linear-gradient(45deg,black,rgb(5, 72, 84));
+    border-radius: 5px;
+    visibility: hidden;
+}
+/* .js-recipe class is created from javascript */
+.js-recipe{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #fff;
+}
+.js-recipe h3{
+    text-align: center;
+    margin: -3px 0px;
+}
+
+.js-recipe p{
+    margin:-5px auto;
+    text-align: center;
+}
+.js-recipe img{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.js-recipe div{
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    border: 2px solid grey;
+    width: 60px;
+    margin: auto;
+}
+.js-recipe i:hover{
+    cursor: pointer;
+}
+/* style for the content that is displayed after user searched for a specific recipe (ending) */
+/* quote with food image starting */
+.food-image-container{
+    width: 850px;
+    height: 400px;
+    border: 3px solid rgb(98, 100, 98);
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 310px;
+    overflow: hidden;
+    background: url('https://images.pexels.com/photos/1907227/pexels-photo-1907227.jpeg?cs=srgb&dl=pexels-cats-coming-1907227.jpg&fm=jpg');
+    background-size: cover;
+    background-color: #000;
+    position: static;
+}
+.food-image-container h1{
+    color: #fff;
+}
+.surprise{
+    color: yellow;
+}
+.h1{
+    margin-top: 10px;
+    font-size: 32px;
+    text-align: center;
+}
+/* quote with food image ending */
+/* special offers starting */
+.special-offers{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 2px solid rgb(11, 10, 10);
+    border-radius: 5px;
+}
+.special-offers img{
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.special-offers .items{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.items span{
+    text-align: center;
+    font-size: 25px;
+
+}
+/* special offers ending */
+.serving{
+    background-color: #000;
+    padding: 5px;
+    animation: hehe 5s linear infinite;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+.serve{
+    color: rgb(240, 240, 76);
+    font-size: 34px;
+   
+}
+@keyframes hehe{
+    25%{color: lightcoral}
+    50%{color: lightcyan}
+    75%{color: lightgreen;}
+    100%{color: lightseagreen;}
+}
+/* cities starting */
+.cities-container{
+    display: grid;
+    grid-template-columns: repeat(5,100px);
+    gap: 30px 150px;
+    padding: 10px;
+    margin: 0px 100px;
+    
+    background: transparent;
+    border-radius: 10px;
+}
+.cities-container .cities button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    margin: 10px;
+    width: 220px;
+    transition: 0.4s;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+}
+.cities-container .cities button:hover{
+    background-color: #464444;
+}
+/* cities ending */
+/* adjusting for mobile screens starting */
+@media only screen and (max-width:414px){
+    #header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 1px;
+        height: 170px;
+    }
+    #header .recipe{
+        position: absolute;
+        top: -10px;
+    }
+    #header .fa-bowl-food{
+        margin-right: 120px;
+    }
+    #header a{
+        font-size: 28px;
+    }
+    #header input{
+        position: absolute;
+        left: 20px;
+        top: 100px;
+    }
+    #header button{
+        position: absolute;
+        left: 350px;
+        top: 100px;
+    }
+    #header #x-mark{
+        position: absolute;
+        left: 368px;
+        top: 108px;
+        font-size: 28px;
+    }
+    #header .dine-in{
+        position: absolute;
+        margin: auto;
+        top: 55px;
+        left: 119px;
+    }
+    #header #shopping{
+        position: absolute;
+        top: 25px;
+        left: 20px;
+    }
+    #header #sidebar-image{
+        position: absolute;
+        top: 27px;
+        left:365px;
+    }
+    .csssidebar{
+        width: 100%;
+        position: fixed;
+        top: 185px;
+        left: 400px;
+    }
+    .csssidebar a{
+        display: block;
+        padding: 8px 0px;
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+    }
+    .food-image-container{
+     width: 100%;    
+     margin-left: 0px;
+    }
+    .food-image-container h1{
+        margin-top: 40px;
+    }
+    .user-requests{
+       width: 100%;
+       border: none;
+       background: linear-gradient(20deg,rgb(14, 14, 14),rgb(12, 12, 12));
+       margin-top: 200px;
+    }
+    .js-recipe{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+    }
+    .js-recipe img{
+        border: 2px solid grey;
+    }
+    .special-offers{
+        border: 1px solid grey;
+        width: 310px;
+        margin: auto;
+    }
+    hr{
+        display: none;
+    }
+    .special-offers .items{
+        margin: auto;
+        padding: 10px;
+    }
+    .cities-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #about-us .social-media{
+        padding: 10px;
+        gap: 20px;
+    }
+    
+}
+/* adjusting for mobile screens ending */
+
+/* about us starting */
+#about-us{
+    background-color: #494fab;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    margin-top: 10px;
+}
+#about-us .images{
+    display: flex;
+    gap: 100px;
+    max-width: 1000px;
+    margin: 50px auto;
+    align-items: center;
+}
+.images img{
+    border-radius: 5px;
+    border: 2px solid white;
+}
+.images p{
+    color: #e2eaec;
+    font-weight: 400;
+}
+
+
+#about-us a{
+    text-decoration: none;
+    color: white;
+    margin: auto;
+   
+}
+.social-media{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+.social-media i{
+    font-size: 24px;
+}
+
+/* about us ending */

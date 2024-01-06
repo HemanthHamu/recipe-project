@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/recipeproject/staticfiles/checkout.css">
+    <script src="https://kit.fontawesome.com/2300780027.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <h1 style="text-align: center;">Checkout</h1>
+        <form id="checkoutForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="cardNumber">Card Number:</label>
+            <div class="cards">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+            </div>
+            <input type="text" id="cardNumber" name="cardNumber" maxlength="16" required>
+
+            <label for="expiryDate">Expiry Date:</label>
+            <div style="display: flex;">
+                <select id="expiryMonth" name="expiryMonth" required>
+                    <option value="" disabled selected>Month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11"> November</option>
+                    <option value="12">December</option>         
+                </select>
+
+                <select id="expiryYear" name="expiryYear" required>
+                    <option value="" disabled selected>Year</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                    <option value="2033">2033</option>
+                    <option value="2034">2034</option>
+                    <option value="2035">2035</option>
+                </select>
+            </div>
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" maxlength="3" required>
+            <button type="button" onclick="submitForm()">Proceed to payment</button>
+        </form>
+    </main>
+
+    <script src="/recipeproject/staticfiles/recipe.js">
+    </script>
+</body>
+</html>

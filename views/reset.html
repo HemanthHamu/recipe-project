@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Password Recovery</title>
+    <style>
+        body {
+            background-color: #cbb861;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            animation: move 1s linear 1;
+        }
+        @keyframes move {
+            0%{transform: rotate(0deg);}
+            50%{transform: rotate(-30deg);}
+            100%{transform: rotate(30deg);}
+        }
+
+        .recovery-form {
+            background-color: #c9b660;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #e4d48b;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #3d3306;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border:none;
+            border-radius: 40px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+            background-color: #e4d48b;
+            box-shadow: 0 0 5px #e4d48b;
+            font-size: 20px;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2980b9;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #01090e;
+            color: #e4d48b;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #212121;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="recovery-form" action="#" method="post">
+            <h2>Password Recovery</h2>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="otp">otp:</label>
+                <input type="otp" id="otp" name="otp" maxlength="4" required>
+            </div>
+            <div class="input-group">
+                <label for="new-password">New password:</label>
+                <input type="text" id="new-password" name="new-password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm password:</label>
+                <input type="text" id="confirm-password" name="confirm-password" required>
+            </div>
+            <a href="/recipeproject/views/loginform.html">return to login page</a>
+            <button type="submit">Recover Password</button>
+        </form>
+    </div>
+</body>
+</html>
