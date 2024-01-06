@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background: linear-gradient(450deg,#0E1226,#251B4F);
+        color: #fff;
+        }
+    .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 50%;
+    padding: 30px;
+    background: linear-gradient(450deg,#0E1226,#251B4F);
+    border-radius: 8px;
+    box-shadow: 0 0 4px #a28fee;
+    margin: 50px auto;
+}
+.contact-form:hover{
+    box-shadow: 0 0 10px #ab9aef;
+}
+
+.hr-input {
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #a28fee;
+    outline: none;
+    padding: 5px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    background: transparent;
+    font-size: 25px;
+    color: #fff;
+}
+::placeholder{
+    color: #fff;
+    opacity: 0.2;
+}
+
+.hr-input:focus {
+    border-bottom:3px solid #3498db;
+}
+.submit-btn{
+   width: 80%;
+   background-color: #543bba;
+   color: #fff;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 20px;
+   margin-left: 50px;
+}
+.submit-btn:hover {
+   background-color: #3c22a3;
+}
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <p style="text-align: center; font-size: 28px; margin-bottom: 70px;">Get in <span style="color: rgb(244, 156, 146);">Touch</span></p>
+        <form action="/success/" data-netlify="true" name="Your Messages" method="POST">
+            <input type="text" id="name" class="hr-input" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" class="hr-input" name="email" placeholder="Your Email" required>
+            <textarea class="hr-input" id="message" rows="4" name="message" placeholder="Enter your message here..." required></textarea><br>
+            <button type="submit"  class="submit-btn">Submit</button>
+        </form>
+
+    </div>
+</body>
+</html>
