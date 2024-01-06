@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipe store</title>
+    <link rel="stylesheet" href="/recipeproject/staticfiles/recipe.css">
+    <script src="https://unpkg.com/gsap@3.10.0/dist/gsap.min.js"></script>
+    <script src="https://kit.fontawesome.com/2300780027.js" crossorigin="anonymous"></script>
+   
+</head>
+<body id="body">
+    <!-- this is the header -->
+    <div id="header">
+        <a href="#" class="recipe"><span style="color:aqua;">Recipe</span> store</a>
+        <i class="fa-solid fa-bowl-food" class="bowl"></i>
+        <input type="text" placeholder="search your recipes" class="search" id="search">
+        <i class="fa-solid fa-xmark" id="x-mark"></i>
+        <button type="submit" class="search-btn">Search</button>
+        <a href="/recipeproject/views/dine-in.html" class="dine-in">Book a table</a>
+        <i class="fa-solid fa-circle-half-stroke change-mode"></i>
+        <a href="/recipeproject/views/checkout.html"><i class="fa-solid fa-cart-shopping" id="shopping"><p>0</p></i></a>
+        <i class="fa-solid fa-bars" id="sidebar-image"></i>
+   </div>
+     <!-- this is the sidebar -->
+    <div class="csssidebar" id="js-sidebar">
+        <a href="#user-requests">Home 🏠</a><hr>
+        <a href="/htmlfiles/practice3.html" >Contact Us 💬</a><hr>
+        <a href="#about-us">About Us 👇 </a><hr>
+        <a href="/recipeproject/views/signupform.html">Signup / Login 👉</a><hr>
+    </div>
+    <!-- this is the content that is going to be displayed after user searched for a specific recipe -->
+    <div class="user-requests" id="user-requests">
+    </div>
+    <!-- this will be displayed while loading the recipes -->
+    <h2 class="h2" style=" margin: 70px 630px;text-align: center;"></h2>
+    <div class="food-image-container">
+        <h1 style="text-align: center;font-size: 50px;color: #00BAE2;">Taste<br> the<br> <span class="surprise">Best</span><br> that <span class="surprise">Surprise</span> you</h1>
+    </div>
+    <h1 class="h1">What do you want 🤔😋</h1><hr>
+    <!-- different categories of food -->
+    <div class="special-offers">
+        <div class="items">
+            <a><img src="https://www.thespruceeats.com/thmb/XDBL9gA6A6nYWUdsRZ3QwH084rk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-chicken-biryani-recipe-7367850-hero-A-ed211926bb0e4ca1be510695c15ce111.jpg" alt="biryani" ></a>
+            <span>Biryanis</span>
+        </div>
+        <div class="items">
+            <a><img src="https://www.liquor.com/thmb/-rpoBkpuGoM8coFXkRqjthkJm68=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Shirley-Temple-720x720-recipe-36cac42475724f31835db9daa2c776e9.jpg" alt="drinks"></a>
+            <span>Drinks</span>
+        </div>
+        <div class="items">
+            <a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Pizza-3007395.jpg/800px-Pizza-3007395.jpg" alt="pizzas"></a>
+            <span>Pizzas</span>
+        </div>
+        <div class="items">
+            <a><img src="https://www.allrecipes.com/thmb/5JVfA7MxfTUPfRerQMdF-nGKsLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/25473-the-perfect-basic-burger-DDMFS-4x3-56eaba3833fd4a26a82755bcd0be0c54.jpg" alt="Burgers"></a>
+            <span>Burgers</span>
+        </div>
+        <div class="items">
+            <a><img src="https://assets-global.website-files.com/5e9ebc3fff165933f19fbdbe/61b31c9d289e22335b6753b2_Ice%20Cream%202.jpg" alt="Ice Creams"></a>
+            <span>Ice Creams</span>
+        </div>
+        <div class="items">
+            <a href="#user-requests"><img src="https://assets.winni.in/c_limit,dpr_1,fl_progressive,q_80,w_1000/73528_marble-crunch-cake.jpeg" alt="Cakes"></a>
+            <span>Cakes</span>
+        </div>
+        <div class="items">
+            <a><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Kolkata_Rolls.jpg" alt="Rolls"></a>
+            <span>Rolls</span>
+        </div>
+        <div class="items">
+            <a><img src="https://tiffycooks.com/wp-content/uploads/2021/09/Screen-Shot-2021-09-21-at-5.21.37-PM.png" alt="Noodles"></a>
+            <span>Noodles</span>
+        </div>
+        <div class="items">
+            <a><img src="https://static.toiimg.com/thumb/53338316.cms?imgsize=223266&width=800&height=800" alt="Naans"></a>
+            <span>Naans</span>
+        </div>
+        <div class="items">
+            <a><img src="https://www.spoonforkbacon.com/wp-content/uploads/2023/04/milshake-recipe-card.jpg" alt="Milk-shakes"></a>
+            <span>Milk Shakes</span>
+        </div>
+        <div class="items">
+            <a><img src="https://images.immediate.co.uk/production/volatile/sites/2/2017/08/Tomato-Cover-V2.jpg?quality=90&resize=556,505" alt="Starters"></a>
+            <span>Starters</span>
+        </div>
+        <div class="items">
+           <a><img src="https://static.toiimg.com/photo/87304656.cms" alt="sweets"></a>
+           <span>Sweets</span>
+        </div>
+         
+    </div>
+    
+        <p class="serving"><marquee behavior="alternate" direction="right" scrollamount="15">We <span class="serve">serve</span> across so many cities</marquee></p>
+    </marquee>
+    <div class="cities-container">
+
+    </div>
+    <!-- about us -->
+    <div id="about-us">
+        <h1 style="text-align: center;">Our Work Policy</h1><hr>
+        <div class="images">
+            <img src="https://media.istockphoto.com/id/1347087219/photo/assortment-of-delicious-authentic-tacos-birria-carne-asada-adobada-cabeza-and-chicharone.jpg?s=612x612&w=0&k=20&c=8TJspKsshMc6QN8aBgnbaMgMwKKHZuLKRq8D_BYj5Tw=" alt="food" width="400" height="200">
+            <p>At recipe store, we are inspired by the vibrant and diverse food cultures from around the world. We believe that food is a universal language that brings people together and creates connections. That's why we offer a wide range of international dishes that are made with authentic flavors and ingredients. From Thai curries to Mexican street tacos, we have something for everyone to enjoy.</p>
+        </div><hr>
+        <div class="images">
+            <img src="https://takethemameal.com/files_images_v2/stam.jpg" alt="food" width="400" height="200">
+            <p>Whether you are looking for a quick and healthy lunch or a family dinner, you can trust that our meals are made with care and attention to detail.We believe that quality is key when it comes to food. That's why we only use the best ingredients and prepare everything fresh in our kitchen. We are committed to providing high-quality meals that are both delicious</p>
+        </div><hr>
+        <div class="images">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/220907-delish-seo-chicken-tikka-masala-0212-eb-1675093094.jpg" alt="food" width="400" height="200">
+            <p>Planning an event or party? Let recipe store take care of the food! We offer catering services for all types of events, from corporate meetings to weddings. Our catering options include a wide range of dishes, from appetizers to entrees, and we can customize our menu to suit your specific needs and preferences. Contact us today to learn more about our catering services.</p>
+        </div><hr>
+        <h2 style="text-align: center;">Follow us</h2>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/hemanth586"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
+            <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            <a href="#"><i class="fa-brands fa-facebook"></i>Facebook</a>
+        </div>
+    </div>
+<script src="/recipeproject/staticfiles/recipe.js"></script>
+<script src="/recipeproject/app.js"></script>
+<script>
+    gsap.from('#header', { opacity: 0,y:-50,duration: 2, delay: 0.5, ease: 'power4.out' });
+    gsap.from('.search-btn', { opacity: 0,x:-50,duration: 2, delay: 1, ease: 'power4.out' });
+    gsap.from('.dine-in', { opacity: 0,x:-50,duration: 2, delay: 1.2, ease: 'power4.out' });
+    gsap.from('#shopping', { opacity: 0,x:50,duration: 2, delay: 1.4, ease: 'power4.out' });
+    gsap.from('#sidebar-image', { opacity: 0,x:50,duration: 2, delay: 1.6, ease: 'power4.out' });
+    gsap.from('.fa-bowl-food', { opacity: 0,y:-50,duration: 2, delay: 2, ease: 'power4.out' });
+    gsap.from('.food-image-container', { opacity: 0,x:-100,duration: 1, delay: 1, ease: 'power4.out' });
+    gsap.from('.h1', { opacity: 0,x:50,duration: 2, delay: 1.5, ease: 'power4.out' });
+</script>
+</body>
+</html>
